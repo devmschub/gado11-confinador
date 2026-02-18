@@ -5,20 +5,21 @@ import { Mail, Lock, Eye, EyeOff, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    // Mock login
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsLoading(false);
-    console.log({ email, password });
+    // Mock login - bypass authentication per user request
+    await new Promise((resolve) => setTimeout(resolve, 500)); // Small delay for UX
+    router.push('/dashboard');
   };
 
   return (
@@ -31,7 +32,7 @@ export function LoginForm() {
               G11
             </div>
           </div>
-          <span className="font-bold text-lg tracking-tight">
+          <span className="font-bold text-lg tracking-tight text-white">
             GADO11
             <span className="font-normal text-xs ml-1 bg-surface-light px-1.5 py-0.5 rounded text-white/50 tracking-wider">
               AGRONEGÓCIO
@@ -50,7 +51,6 @@ export function LoginForm() {
           icon={<Mail size={18} />}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required
         />
 
         <Input
@@ -63,7 +63,6 @@ export function LoginForm() {
           onRightIconClick={() => setShowPassword(!showPassword)}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required
         />
       </div>
 
