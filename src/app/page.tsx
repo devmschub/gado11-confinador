@@ -15,7 +15,7 @@ export default function Home() {
           {/* Placeholder for the dark textured background */}
           <div className="absolute inset-0 bg-surface-dark z-0" />
           <Image
-            src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?q=80&w=2680&auto=format&fit=crop"
+            src="https://static.vecteezy.com/system/resources/thumbnails/008/492/744/small_2x/farmer-with-tablet-at-modern-dairy-farm-farmer-looking-at-cow-in-modern-barn-and-taking-notes-on-tablet-video.jpg"
             alt="Farmer using tablet in barn"
             fill
             className="object-cover opacity-60 grayscale-10 contrast-125"
