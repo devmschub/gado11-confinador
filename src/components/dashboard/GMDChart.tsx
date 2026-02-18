@@ -58,8 +58,6 @@ export function GMDChart() {
               axisLine={false}
               tickLine={false}
               tick={{ fill: '#6b7280', fontSize: 12 }}
-              exclude
-              viewBox={{ x: 0, y: 0, width: 0, height: 0 }}
               padding={{ left: 20, right: 20 }}
             />
             <YAxis
