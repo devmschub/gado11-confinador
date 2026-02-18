@@ -53,9 +53,9 @@ const statusIcon: Record<Status, any> = {
 
 export function ReceivablesTable() {
   return (
-    <div className="bg-surface-light/30 border border-surface-light rounded-2xl overflow-hidden">
-      <div className="p-6 border-b border-surface-light flex items-center justify-between">
-        <h3 className="text-lg font-bold text-white flex items-center gap-2">
+    <div className="bg-white dark:bg-surface-dark border border-gray-200 dark:border-border-dark rounded-2xl overflow-hidden shadow-lg">
+      <div className="p-6 border-b border-gray-200 dark:border-border-dark flex items-center justify-between">
+        <h3 className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
           <span className="text-primary">💸</span> Próximos Recebimentos
         </h3>
         <button className="text-xs text-primary font-bold hover:underline">
@@ -65,7 +65,7 @@ export function ReceivablesTable() {
 
       <div className="overflow-x-auto">
         <table className="w-full text-left text-sm">
-          <thead className="bg-surface-light/50 text-gray-500 font-bold uppercase tracking-wider text-[10px]">
+          <thead className="bg-gray-50 dark:bg-surface-darker text-gray-500 font-bold uppercase tracking-wider text-[10px]">
             <tr>
               <th className="px-6 py-4">Descrição</th>
               <th className="px-6 py-4">Referência</th>
@@ -74,15 +74,15 @@ export function ReceivablesTable() {
               <th className="px-6 py-4 text-right">Valor</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-surface-light/30">
+          <tbody className="divide-y divide-gray-200 dark:divide-gray-800">
             {data.map((item) => {
               const Icon = statusIcon[item.status];
               return (
                 <tr
                   key={item.id}
-                  className="hover:bg-surface-light/10 transition-colors"
+                  className="hover:bg-gray-50 dark:hover:bg-surface-darker/50 transition-colors"
                 >
-                  <td className="px-6 py-4 font-medium text-white">
+                  <td className="px-6 py-4 font-medium text-gray-900 dark:text-white">
                     {item.description}
                   </td>
                   <td className="px-6 py-4 text-gray-400">{item.reference}</td>
@@ -98,7 +98,7 @@ export function ReceivablesTable() {
                       {item.status}
                     </span>
                   </td>
-                  <td className="px-6 py-4 text-right font-bold text-white">
+                  <td className="px-6 py-4 text-right font-bold text-gray-900 dark:text-white">
                     {item.value}
                   </td>
                 </tr>

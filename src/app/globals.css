@@ -3,9 +3,13 @@
 @theme {
   --font-manrope: var(--font-manrope);
   --color-primary: #13ec5b;
-  --color-primary-hover: #10c94d;
+  --color-primary-hover: #0fd451;
   --color-surface-dark: #16201a;
+  --color-surface-darker: #101813;
   --color-surface-light: #1f2923;
+  --color-background-light: #f6f8f6;
+  --color-background-dark: #0c120e;
+  --color-border-dark: #233328;
   --color-background: #0d0d0d;
   --color-foreground: #ffffff;
   --color-border: #2d3831;

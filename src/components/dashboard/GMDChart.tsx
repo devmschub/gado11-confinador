@@ -22,10 +22,10 @@ const data = [
 
 export function GMDChart() {
   return (
-    <div className="bg-surface-light/30 border border-surface-light rounded-2xl p-6 h-[400px] flex flex-col">
+    <div className="bg-white dark:bg-surface-dark border border-gray-200 dark:border-border-dark rounded-2xl p-6 h-[400px] flex flex-col shadow-lg">
       <div className="flex items-start justify-between mb-6">
         <div>
-          <h3 className="text-lg font-bold text-white flex items-center gap-2">
+          <h3 className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
             <span className="text-primary">📈</span> Evolução do GMD Médio
           </h3>
           <p className="text-xs text-gray-500">
@@ -33,7 +33,7 @@ export function GMDChart() {
           </p>
         </div>
         <div className="flex gap-4 text-[10px] font-bold uppercase tracking-wider">
-          <div className="flex items-center gap-1.5 text-white">
+          <div className="flex items-center gap-1.5 text-gray-900 dark:text-white">
             <div className="w-2 h-2 rounded-full bg-primary"></div>Realizado
           </div>
           <div className="flex items-center gap-1.5 text-gray-500">
