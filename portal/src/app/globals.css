@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-manrope: var(--font-manrope);
+  --color-primary: #13ec5b;
+  --color-primary-hover: #10c94d;
+  --color-surface-dark: #16201a;
+  --color-surface-light: #1f2923;
+  --color-background: #0d0d0d;
+  --color-foreground: #ffffff;
+  --color-border: #2d3831;
+}
+
+:root {
+  --background: #0d0d0d;
+  --foreground: #ffffff;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  font-family: var(--font-manrope), sans-serif;
+}
