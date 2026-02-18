@@ -3,7 +3,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, Box, Store, Wallet, ArrowRight } from 'lucide-react';
+import {
+  LayoutDashboard,
+  Package,
+  Store,
+  Wallet,
+  ArrowRight,
+  Settings,
+} from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export function Sidebar() {
@@ -26,10 +33,10 @@ export function Sidebar() {
             active={pathname === '/dashboard'}
           />
           <NavItem
-            href="/dashboard/lotes"
-            icon={<Box size={20} />}
+            href="/dashboard/meus-lotes"
+            icon={<Package size={20} />}
             label="Meus Lotes"
-            active={isActive('/dashboard/lotes')}
+            active={isActive('/dashboard/meus-lotes')}
           />
           <NavItem
             href="/dashboard/marketplace"
@@ -46,13 +53,27 @@ export function Sidebar() {
         </nav>
       </div>
 
+      <div className="px-6 mb-8">
+        <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">
+          Configurações
+        </p>
+        <nav className="space-y-1">
+          <NavItem
+            href="/dashboard/configuracoes"
+            icon={<Settings size={20} />}
+            label="Configurações"
+            active={isActive('/dashboard/configuracoes')}
+          />
+        </nav>
+      </div>
+
       <div className="px-6 mt-auto">
-        <div className="p-4 bg-surface-dark rounded-xl border border-border-dark relative overflow-hidden group cursor-pointer">
+        <div className="p-4 bg-gray-50 dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-border-dark relative overflow-hidden group cursor-pointer">
           <div className="absolute inset-0 bg-linear-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <h4 className="font-bold text-white mb-1 relative z-10">
+          <h4 className="font-bold text-gray-900 dark:text-white mb-1 relative z-10 text-sm">
             Precisa de Ajuda?
           </h4>
-          <p className="text-xs text-gray-400 mb-3 relative z-10">
+          <p className="text-xs text-gray-500 mb-3 relative z-10">
             Fale com seu gerente de conta Gado 11.
           </p>
           <button className="text-xs font-bold text-primary flex items-center gap-1 hover:gap-2 transition-all">
@@ -82,7 +103,7 @@ function NavItem({
         'flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200',
         active
           ? 'bg-primary/10 text-primary font-bold'
-          : 'text-gray-400 hover:text-white hover:bg-surface-dark',
+          : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-surface-dark',
       )}
     >
       {icon}
