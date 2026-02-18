@@ -10,7 +10,7 @@ export default function Home() {
       <div className="hidden lg:flex w-full lg:w-1/2 relative flex-col justify-end p-12 xl:p-20 overflow-hidden bg-surface-dark border-r border-surface-light/10">
         {/* Background Overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-10" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent z-10" />
           <div className="absolute inset-0 bg-primary/5 mix-blend-overlay z-10" />
           {/* Placeholder for the dark textured background */}
           <div className="absolute inset-0 bg-surface-dark z-0" />
@@ -18,7 +18,7 @@ export default function Home() {
             src="https://images.unsplash.com/photo-1596733430502-d73d09029748?q=80&w=2669&auto=format&fit=crop"
             alt="Cattle in barn"
             fill
-            className="object-cover opacity-60 grayscale-[10%] contrast-125"
+            className="object-cover opacity-60 grayscale-10 contrast-125"
             priority
           />
         </div>
@@ -58,7 +58,7 @@ export default function Home() {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12 relative bg-surface-dark">
         {/* Mobile Background Gradient */}
         <div className="absolute inset-0 lg:hidden pointer-events-none z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-surface-dark via-surface-dark to-black opacity-90" />
+          <div className="absolute inset-0 bg-linear-to-b from-surface-dark via-surface-dark to-black opacity-90" />
           <Image
             src="https://images.unsplash.com/photo-1545652966-231121111111?q=80&w=2669&auto=format&fit=crop"
             alt="Background Mobile"

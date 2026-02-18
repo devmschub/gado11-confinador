@@ -162,7 +162,7 @@ export default function DashboardPage() {
                   </span>
                 </div>
                 <div className="w-full bg-gray-700 h-1.5 rounded-full mt-3 overflow-hidden">
-                  <div className="bg-primary h-full w-[100%]"></div>
+                  <div className="bg-primary h-full w-full"></div>
                 </div>
                 <p className="text-[10px] text-primary font-bold mt-2">
                   Embarque agendado: Amanhã 06:00h.
