@@ -20,6 +20,7 @@ export default function Home() {
             fill
             className="object-cover opacity-60 grayscale-10 contrast-125"
             priority
+            unoptimized
           />
         </div>
 
@@ -60,10 +61,11 @@ export default function Home() {
         <div className="absolute inset-0 lg:hidden pointer-events-none z-0">
           <div className="absolute inset-0 bg-linear-to-b from-surface-dark via-surface-dark to-black opacity-90" />
           <Image
-            src="https://images.unsplash.com/photo-1545652966-231121111111?q=80&w=2669&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1596733430502-d73d09029748?q=80&w=2669&auto=format&fit=crop"
             alt="Background Mobile"
             fill
             className="object-cover opacity-10"
+            unoptimized
           />
         </div>
 
