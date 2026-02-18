@@ -15,10 +15,10 @@ export default function Home() {
           {/* Placeholder for the dark textured background */}
           <div className="absolute inset-0 bg-surface-dark z-0" />
           <Image
-            src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=2668&auto=format&fit=crop"
-            alt="Farmer using tablet with cattle"
+            src="https://images.unsplash.com/photo-1596733430502-d73d09029748?q=80&w=2669&auto=format&fit=crop"
+            alt="Cattle in barn"
             fill
-            className="object-cover opacity-60 grayscale-[20%] contrast-125"
+            className="object-cover opacity-60 grayscale-[10%] contrast-125"
             priority
           />
         </div>
